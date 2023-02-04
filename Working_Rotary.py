@@ -45,7 +45,7 @@ def rotary_active():
                     resistance = 100
                 print(f"Direction: {direction}, Resistance: {resistance}, Speed: {speed}")      #this shows what direction the user spun the knob the new resistance value and how fast the spin was this if for debugging
                 lcd.clear()
-                lcd.setCursor(0, 0)                     #cursor requires a row and column number for the display this just says start from top N.UY
+                lcd.setCursor(0, 0)                     #cursor requires a row and column number for the display this just says start from top left
                 lcd.printout(f"Select with knob")       #print to display
                 lcd.setCursor(0, 1)                     #cursor points to second row
                 lcd.printout(f"{resistance} ohms")      #print to display
