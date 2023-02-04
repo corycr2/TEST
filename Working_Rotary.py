@@ -83,10 +83,8 @@ def pot_select():
         if (GPIO.input(clk) == 0) or (GPIO.input(dt) == 0):         #becasue there is only two options no need to determine direction, we can just say switch to other pot
             if pot_num == 0:
                 pot_num = 1
-            elif pot_num == 1:
-                pot_num = 2
             else:
-                pot_num = 1
+                pot_num = 0
             print(f"Selected pot: {pot_num}")
             if pot_num == 1:
                 lcd.setCursor(0,1)                              #Points to the first option in the display which is pot P0
@@ -110,7 +108,7 @@ def pot_select():
 
 while True:
     resistance = 100                                            #declaring resistance to automaticlly be in our bounds by intalizing it to 100 
-    pot_num = 1                                                 #setting pot selected to one intially to be in the bounds of the code
+    pot_num = 0                                                 #setting pot selected to one intially to be in the bounds of the code
     lcd.setRGB(255,100,0)                                       #sets the color of the dispaly
     lcd.clear()
     lcd.setCursor(0, 0)
